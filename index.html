@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--  -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  -->
+    <title>FlickrSearch</title>
+
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <h1>FlickrSearch</h1>
+      </div>
+
+      <div class="search">
+        <div class="container">
+          <form>
+            <input type="text" placeholder="Sökord" name="searchterm" id="searchTerm" value="germany" onKeyPress="return checkSubmit(event);" />
+            <a class="btn searchBtn" id="submitSearch">Sök</a>
+            <a class="btn searchBtn" id="clearSearch">Rensa</a>
+
+            <div style="float:right;">
+              <a class="btn searchBtn" id="displayGallery">Visa galleri</a>
+              <a class="btn searchBtn" id="emptyGallery">Töm galleri</a>
+            </div>
+            <!--
+            <input type="button" name="submitsearch" id="submitSearch" value="Sök" />
+            <input type="button" name="clearsearch" id="clearSearch" value="Rensa" />
+            -->
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container" id="searchresult">
+    </div>
+
+    <div id="modal" class="modal">
+      <span id="closeModal" class="close">&times;</span>
+      <img class="modalcontent" id="modalImg">
+      <div id="modalCaption"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
